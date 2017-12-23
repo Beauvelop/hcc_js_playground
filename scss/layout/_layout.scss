@@ -14,3 +14,11 @@
   background-color: navy;
   color: map-get($colors, myIvory);
 }
+ol {
+  position: absolute;
+  top: 0;
+}
+li {
+  display: inline-block
+
+}

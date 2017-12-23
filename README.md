@@ -1,4 +1,4 @@
-# A "Canvas" on which to paint and practice js exercises for my students
+# A "Canvas" on which to "paint" & practice js exercises for my students
 
 First Draft
-<img src="./img/scrnshot.jpg" alt="screenshot draft1">
+<img src="https://raw.githubusercontent.com/Beauvelop/hcc_js_playground/img/scrnShot.jpg" alt="screenshot draft1">

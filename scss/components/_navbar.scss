@@ -1,7 +1,7 @@
 button {
   font-family: map-get($fonts, thin);
-  width: auto;
-  height: 5vh;
   background: navy;
-  color: map-get($colors, mango );
+  color: map-get($colors, mango);
+  width: 8vw;
+  height: 4vh;
 }

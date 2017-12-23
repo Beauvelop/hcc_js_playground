@@ -114,11 +114,12 @@ body {
 #twinkleBtn {
   width: 8vw;
   height: 5vh;
-  background: navy;
+  background: rgb(71, 109, 116);
   color: wheat;
+  border: 1px solid wheat;
   position: absolute;
-  top: 0;
-  left: 25vw;
+  top: 10vh;
+  left: 1vw;
 }
 
 #twinkleBtn:hover {

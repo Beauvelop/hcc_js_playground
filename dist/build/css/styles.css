@@ -92,11 +92,12 @@ body {
 #twinkleBtn {
   width: 8vw;
   height: 5vh;
-  background: navy;
+  background: #476d74;
   color: wheat;
+  border: 1px solid wheat;
   position: absolute;
-  top: 0;
-  left: 25vw; }
+  top: 10vh;
+  left: 1vw; }
 
 #twinkleBtn:hover {
   background-color: black; }
@@ -126,10 +127,16 @@ body {
   fill: white; }
 
 button {
-  background-color: #ebb861;
-  background-color: purple;
+  background: navy;
+  color: #ebb861;
   width: 8vw;
   height: 4vh; }
+
+button {
+  width: auto;
+  height: 5vh;
+  background: navy;
+  color: #ebb861; }
 
 h1.title-lg {
   color: #e6d8cc !important; }
@@ -150,5 +157,12 @@ img {
   grid-row: 2;
   background-color: navy;
   color: #e6d8cc; }
+
+ol {
+  position: absolute;
+  top: 0; }
+
+li {
+  display: inline-block; }
 
 /*# sourceMappingURL=styles.css.map */
