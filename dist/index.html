@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HCC JS CONTENT</title>
+    <link rel="stylesheet" href="./build/css/styles.css">
+  </head>
+  <body>
+    <button id="twinkleBtn" type="button">Twinkle</button>
+
+    <!-- ***************** ALIEN ********************* -->
+    <svg id="alien" xmlns="http://www.w3.org/2000/svg" viewBox="0,0,800, 400">
+      <defs>
+        <filter id="filt" x="0" y="0">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+        </filter>
+      </defs>
+    
+      <linearGradient id="underFill" gradientUnits="userSpaceOnUse" x1="392.501" y1="226.688" x2="392.501" y2="348.3614" gradientTransform="matrix(1 0 0 -.9357 0 453.452)">
+        <stop offset=".1" stop-color="#8284a3"/>
+        <stop offset=".3" stop-color="#1b1b1b"/>
+        <stop offset=".4" stop-color="#1a1a1a"/>
+        <stop offset=".5" stop-color="#8284a3"/>
+        <stop offset="1" stop-color="#30395b"/>
+      </linearGradient>
+      <radialGradient id="understroke" cx="392.6602" cy="184.4971" r="219.609" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#757395"/>
+        <stop offset=".4922" stop-color="#73728f" stop-opacity=".5"/>
+        <stop offset="1" stop-color="#757395"/>
+      </radialGradient>
+      <linearGradient id="rim2" gradientUnits="userSpaceOnUse" x1="242.9951" y1="72.6138" x2="516.6846" y2="72.6138">
+        <stop offset=".5" stop-color="#faf2f8"/>
+        <stop offset="1" stop-color="#757395"/>
+      </linearGradient>
+      <radialGradient id="topGrad" cx="388" cy="74.1245" r="219.51" gradientTransform="matrix(1 0 0 .5 0 37.0623)" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#e6e6e6"/>
+        <stop offset=".2" stop-color="#d1d1d7"/>
+        <stop offset=".6" stop-color="#9b9ab1"/>
+        <stop offset="1" stop-color="#757395"/>
+      </radialGradient>
+      <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="242.9111" y1="72.6123" x2="516.749" y2="72.6123">
+        <stop offset="0" stop-color="#757395"/>
+        <stop offset=".5" stop-color="#bdc1d3"/>
+        <stop offset="1" stop-color="#757395"/>
+      </linearGradient>
+    
+      <path class="underside"  fill="url(#underFill)" stroke="url(#understroke)" stroke-miterlimit="10" d="M114.2 154.4c5.2 1.6 10.5 3.2 15.8 4.7 2.7.8 5.3 1.5 8 2.3 23 6.6 47 13.6 68.7 23.2 3.1 1.2 6.1 2.4 9.2 3.7 27.4 11.1 54 23.8 79.8 38.5 3 1.4 6.1 2.7 9.3 3.9 30.2 0 60.4-.1 90.5-.1h60c10.8-4.2 21.3-9.3 31.3-15.4 2.9-1.4 5.7-2.8 8.6-4.2 5.7-2.7 11.5-5.3 17.3-7.5 3-1.4 6.1-2.7 9.2-4 9.2-3.9 18.6-7.5 28-10.9 3.2-1.1 6.3-2.2 9.5-3.3 2.6-.7 5.2-1.5 7.9-2.4 2.6-.8 5.3-1.7 7.9-2.6 3.7-1.2 7.4-2.3 11.1-3.5 21.7-7.8 43.7-14.8 67-21.2 3.1-1.1 6.2-2.3 9.2-3.6 3-1.4 6-2.9 8.9-4.6 2.8-1.4 5.5-2.9 8.2-4.4 5.5-3 10.9-6 16.4-9-5.6-1.6-11.2-2.8-16.9-3.6-2.8-.4-5.7-.7-8.5-1-2.4-.2-4.9-.3-7.4-.5s-4.9-.3-7.4-.4C641 127 626 128 611 126.9c-2.8 0-5.6-.1-8.4-.1-30.7-2.8-60.7 1.2-92-.4-3.3-.1-6.7-.2-10-.2-30.1-.6-60.2-.3-90.6-.5l-10.2-.3-10.2-.3c-3.4-.1-6.8-.1-10.2-.1-28.8.1-57.5-.6-86-.1-3.6.1-7.1.1-10.7.2-3.4.1-6.8.2-10.2.2-3.4.1-6.8.2-10.3.3-49.2.4-98.2 1.4-146 8.3-2.3.3-4.6.7-6.8 1.1-6.8 1.3-13.6 2.9-20.4 5 5 4.5 10.5 7.9 16.3 10.7 2.9 1.4 5.9 2.6 8.9 3.7z"/>
+      <path fill="none" stroke="#000" stroke-width="1" d="M110.3 151.7c183.5-11.8 365.9-11.8 548.9.1"/>
+      <path id="topside" fill="url(#topGrad)" d="M684 130c-63-20.2-127.9-34.5-185.8-65.1-2.1-.7-4.1-1.5-6.2-2.5l-16.2-9c-8.7-5.8-16.7-12.6-24-20.1-6.8.1-13.8.1-12.8.1-20.2.2-40.3.3-60.5.3s-40.3 0-60.5-.3c.8 0-4.4 0-10.3-.1-4.9 4.9-10 9.4-15.3 13.6-10.3 8.3-21.7 14.8-34.1 19.5-.1 0-.1 0-.2.1C206.7 93.3 152.5 112.8 95 129c-4 2-7 6-11 8 116-7 232-18 348.6-14.9 23.6.5 47.3 1.3 71 2.4C567 129 629 133 692 136c-1-4-5-5-8-6z"/>
+      <path fill="black" stroke="none" stroke-width="0" d="M295.5 58.9h2.9c.6 0 1.3 0 2-.1h1.1c.4 0 .8 0 1.2-.1.4 0 .8 0 1.3-.1.4 0 .9 0 1.3-.1.4 0 .9 0 1.4-.1s.9-.1 1.4-.1c.5 0 .9-.1 1.4-.1s.9-.1 1.4-.1c.5 0 .9-.1 1.4-.1.5 0 .9-.1 1.4-.1.5 0 .9-.1 1.4-.1s.9-.1 1.3-.1.9-.1 1.3-.1.8-.1 1.2-.1c.4 0 .8-.1 1.1-.1.4 0 .7-.1 1.1-.1.7-.1 1.3-.1 1.9-.2.6 0 1-.1 1.4-.1.8-.1 1.3-.1 1.3-.1s.3-.5.8-1.3c.2-.4.5-.9.9-1.4.3-.5.7-1.2 1.1-1.8.2-.3.4-.7.6-1 .2-.4.4-.7.6-1.1s.4-.8.6-1.1c.2-.4.4-.8.5-1.2.2-.4.3-.8.5-1.2.2-.4.3-.8.4-1.2.1-.4.3-.8.4-1.2.1-.4.2-.8.4-1.2.2-.8.4-1.5.6-2.2.2-.7.4-1.2.5-1.7.3-1 .4-1.5.4-1.5s-.7 0-1.8.1c-.6 0-1.2 0-1.9.1h-2.5c-.5 0-.9 0-1.3.1-.5 0-.9 0-1.4.1-.5 0-1 0-1.4.1-.5 0-1 0-1.4.1-.5 0-1 0-1.4.1-.5 0-1 0-1.4.1-.5 0-.9 0-1.4.1-.4 0-.9 0-1.3.1-.4 0-.8 0-1.2.1-.4 0-.8 0-1.1.1-.7 0-1.4.1-1.9.1-1.1.1-1.7.1-1.7.1-.3.3-.6.7-1 1-.3.3-.6.7-1 1-.3.3-.6.7-1 1-.3.3-.6.7-.9 1-.3.3-.6.7-.9 1.1s-.6.7-.9 1.1c-.4.5-.9 1.1-1.3 1.7-.4.6-.8 1.1-1.2 1.7s-.8 1.2-1.2 1.7l-1.2 1.8c-.4.6-.8 1.2-1.1 1.8s-.8 1.2-1.1 1.8c-.4.6-.7 1.2-1.1 1.8-.8.1-1.2.7-1.5 1.2z"/>
+      <path  id="ctr-rim" fill="none" stroke="#333" stroke-width="6" d="M83.7 136.2C287 123 489 123 691.7 136.4"/>
+      <path fill="black" stroke="none" d="M464.9 59.1h-3.2c-.6 0-1.4 0-2.2-.1h-6.8c-.5 0-1 0-1.5-.1-.5 0-1 0-1.5-.1-.5 0-1 0-1.6-.1-.5 0-1 0-1.5-.1s-1 0-1.5-.1-1 0-1.5-.1-1 0-1.5-.1c-.5 0-1 0-1.4-.1-.5 0-.9 0-1.4-.1-.4 0-.9 0-1.3-.1h-1.2c-.8 0-1.5-.1-2.1-.1-.6 0-1.2 0-1.6-.1-.9 0-1.4-.1-1.4-.1s-.4-.5-.9-1.3c-.3-.4-.6-.9-1-1.5s-.7-1.2-1.1-1.9c-.2-.4-.4-.7-.6-1.1s-.4-.8-.5-1.2c-.2-.4-.3-.8-.5-1.3s-.3-.9-.4-1.3-.3-.9-.4-1.3c-.1-.4-.2-.9-.3-1.3-.1-.4-.2-.9-.3-1.3-.1-.5-.2-.9-.3-1.4-.1-.4-.2-.9-.3-1.3-.2-.8-.4-1.5-.6-2.2l-.5-2h21.2c.8 0 1.5.1 2.1.1.6 0 1.2 0 1.6.1.9 0 1.4.1 1.4.1.3.4.7.8 1 1.2.3.4.7.8 1 1.2.3.4.7.8 1 1.2.3.4.6.8 1 1.2.3.4.6.8.9 1.3.3.4.6.9.9 1.3.3.4.6.9.9 1.3.3.4.6.9.9 1.3l1.2 1.8 1.2 1.8 1.2 1.8 1.2 1.8c.4.6.8 1.2 1.3 1.8 0 1.3.5 1.9.9 2.5z"/>
+      <path fill="url(#rim2)" stroke="url(#g)" stroke-width="2" stroke-miterlimit="10" d="M243 75.3c91.2-7.7 181.8-6.6 273.7-.7"/>
+    
+    <g class="myFlare" filter="url(#filt)">
+      <radialGradient id="flare-glow-rad" cx="240.3828" cy="191.1904" r="160.1602" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#230000"/>
+          <stop offset=".7" stop-color="white"/>
+          <stop offset="1" stop-color="#230000"/>
+        </radialGradient>
+        <radialGradient id="orange-mid-glow" cx="380.3828" cy="191.1904" r="80.0801" gradientUnits="userSpaceOnUse">
+          <stop offset=".2" stop-color="#fff"/>
+          <stop offset="1" stop-color="coral"/>
+        </radialGradient>
+        <radialGradient id="ctr-glow" cx="380.3828" cy="191.1904" r="55" gradientUnits="userSpaceOnUse">
+          <stop offset=".05" stop-color="skyblue"/>
+          <stop offset="1"/>
+        </radialGradient>
+        <radialGradient id="lt-glow" cx="240.3828" cy="191.1904" r="45" gradientUnits="userSpaceOnUse">
+          <stop offset=".01" stop-color="orange"/>
+          <stop offset="1"/>
+        </radialGradient>
+        <radialGradient id="rt-glow" cx="500.3828" cy="191.1904" r="45" gradientUnits="userSpaceOnUse">
+          <stop offset=".01" stop-color="yellow"/>
+          <stop offset="1"/>
+        </radialGradient>
+    
+        <circle opacity=".2" fill="url(#flare-glow-rad)" cx="380" cy="191" r="360"/>
+        <circle opacity=".2" fill="url(#orange-mid-glow)" cx="380" cy="191" r="80"/>
+        <circle fill="url(#ctr-glow)" cx="380" cy="191" r="38"/>
+        <!-- left -->
+        <circle opacity=".1" fill="url(#flare-glow-rad)" cx="240" cy="191" r="160"/>
+        <circle opacity=".4" fill="url(#orange-mid-glow)" cx="240" cy="191" r="80"/>
+        <circle fill="url(#lt-glow)" cx="240" cy="191" r="38"/>
+        <!-- right -->
+        <circle opacity=".1" fill="url(#flare-glow-rad)" cx="500" cy="191" r="160"/>
+        <circle opacity=".3" fill="url(#orange-mid-glow)" cx="500" cy="191" r="80"/>
+        <circle fill="url(#rt-glow)" cx="500" cy="191" r="38"/>
+    </g>
+    
+    </svg>
+    
+    <!-- ***************** HOUSE ********************* -->
+    <svg id="house" xmlns="http://www.w3.org/2000/svg" width="400" height="400" version="1">
+      <linearGradient id="a" x1="121" x2="121" y1="349" y2="256" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#f8c8a7"/>
+        <stop offset="1" stop-color="#c69c6d"/>
+      </linearGradient>
+      <path fill="url(#a)" d="M38 256h166v93H38z"/>
+      <path fill="#8299CE" d="M30 215h345v44H30z"/>
+      <path fill="#999" stroke="#999" stroke-miterlimit="10" d="M38 256h166"/>
+      <path fill="#8299CE" stroke="#999" stroke-miterlimit="10" d="M38 276h166M38 296h166M38 316h166M38 336h166"/>
+      <path fill="#F2EFDF" d="M111 219h4v130h-4z"/>
+      <path fill="#F2EFDF" d="M32 258h171v3H32zm0 16h171v3H32zm-5 72h176v3H27z"/>
+      <path fill="#F2EFDF" d="M41 260h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm-39 48h83v3H32z"/>
+      <path fill="#F2EFDF" d="M43 310h3v39h-3zm10 0h3v39h-3zm10 0h3v39h-3zm10 0h3v39h-3zm10 0h3v39h-3zm10 0h3v39h-3zm10 0h3v39h-3zm-22-50h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm20 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zm10 0h2v17h-2zM30 219h5v130h-5z"/>
+      <path fill="#333" d="M382 218H16l29-103h309zm-239 0h-22z"/>
+      <path fill="#754C24" stroke="#CCC" stroke-miterlimit="10" stroke-width="6" d="M135 284h49v67h-49z"/>
+      <path fill="none" stroke="#FF0" stroke-miterlimit="10" stroke-width="6" d="M143 324h5"/>
+      <path fill="#BECC5F" d="M204 258h171v116H204z"/>
+      <path fill="#8299CE" stroke="#999" stroke-miterlimit="10" d="M203 257h168"/>
+      <path fill="none" stroke="#999" stroke-miterlimit="10" d="M204 281l50 8m0 0h66m0 0l55-12m-171 24l50 8m0 0h66m0 0l55-12m-171 24l50 8m0 0h66m0 0l55-12m-171 24l50 8m0 0h66m0 0l55-12m-171 24l50 8m0 0h66m0 0l55-12"/>
+      <path fill="#333" stroke="#F276A0" stroke-miterlimit="10" stroke-width="3" d="M243 342l-29-4v-47l29 4z"/>
+      <path fill="#DEC361" d="M242 325l-27-4v-28l27 4z"/>
+      <path fill="none" stroke="#F276A0" stroke-miterlimit="10" stroke-width="3" d="M215 316l29 4"/>
+      <path fill="#333" stroke="#F276A0" stroke-miterlimit="10" stroke-width="3" d="M362 339l-29 4v-47l29-4z"/>
+      <path fill="#DEC361" d="M361 321l-27 4v-28l27-4z"/>
+      <path fill="none" stroke="#F276A0" stroke-miterlimit="10" stroke-width="3" d="M334 319l29-4"/>
+      <path fill="#333" stroke="#F276A0" stroke-miterlimit="10" stroke-width="3" d="M269 297h29v47h-29z"/>
+      <path fill="#DEC361" d="M270 298h27v28h-27z"/>
+      <path fill="none" stroke="#F276A0" stroke-miterlimit="10" stroke-width="3" d="M270 321h29"/>
+      <path fill="#754C24" d="M150 78h31v61h-31z"/>
+      <path fill="#B3B3B3" d="M150 134h31v5h-31z"/>
+      <path fill="gray" stroke="#999" stroke-miterlimit="10" d="M146 66h39v12h-39z"/>
+      <g fill="#754C24" stroke-miterlimit="10">
+        <path stroke="#F276A0" stroke-width="5" d="M32 354h162v14H32z"/>
+        <path stroke="#BECC5F" stroke-width="5" d="M204 384l49 7v-17l-49-7z"/>
+        <path stroke="#BECC5F" stroke-width="6" d="M373 383l-53 7v-18l53-7z"/>
+        <path stroke="#C7CC87" stroke-width="5" d="M256 373h60v19h-60z"/>
+      </g>
+      <path fill="#FBF6A1" stroke="#ABC8E9" stroke-miterlimit="10" stroke-width="12" d="M379 253H193l93-216z"/>
+      <path fill="none" stroke="#8DA09C" stroke-miterlimit="10" d="M361 230c0 6-2 9-6 9s-6-3-6-8c0 5-2 8-6 8-5 0-6-4-6-9 0 6-2 9-7 9-4 0-6-3-6-9 0 6-2 9-6 9s-6-3-6-8c0 5-2 8-6 8-5 0-7-4-7-9 0 6-2 9-6 9s-6-3-6-9c0 6-2 9-6 9s-6-3-6-8c0 5-2 8-7 8s-6-4-6-9c0 6-2 9-6 9s-6-3-6-9c0 6-2 9-6 9-5 0-7-3-7-8 0 5-2 8-6 8s-6-4-6-9c0 6-2 9-6 9s-6-3-6-9"/>
+      <path fill="none" stroke="#2E423F" stroke-miterlimit="10" d="M349 204c-1 3-4 6-8 5-3-1-4-6-4-9 0 4-1 9-6 9s-7-4-7-8c0 3-1 8-6 8s-6-5-6-8c0 4-2 8-7 8s-6-5-6-9c0 4-1 9-6 9-4 0-6-4-6-8 0 4-2 8-7 8-4 0-6-4-6-8 0 4-2 8-6 8-5 0-6-5-6-9 0 4-2 9-6 9-5 0-7-4-7-8 0 4-1 8-6 8s-6-4-6-8c0 4-2 8-7 8s-6-5-6-9m113-24l-1-5c0 3-2 8-6 8-5 0-7-5-7-9 0 5-2 9-7 9-4-1-5-5-5-9 0 4-1 8-6 9s-7-4-7-8c0 3-2 8-6 8-5 0-6-5-6-9 0 5-3 9-7 9-5-1-6-5-6-9 0 4-1 8-5 9-5 1-7-4-7-8-1 3-2 8-7 8-4 0-6-5-6-9 0 5-2 9-7 9-4 0-6-5-5-9m90-21c-4-1-5-6-5-9 0 4-2 9-6 9-5 0-7-5-7-8 0 3-2 8-6 8-5 0-6-5-6-8 0 3-2 8-7 8s-6-5-6-9c0 4-1 9-6 9-4 0-6-5-6-8-1 3-2 8-7 8-4 0-6-5-6-8 0 3-2 8-7 8-4 0-6-5-5-9m65-25l-1-5c0 4-2 9-7 9-4-1-6-5-6-9 0 4-1 8-5 9-5 1-7-4-7-8 0 3-2 8-6 8-5 0-7-5-7-8 0 3-2 8-6 8-5 0-6-5-6-9"/>
+      <path fill="#333" stroke="#F276A0" stroke-miterlimit="10" stroke-width="3" d="M269 148h29v47h-29z"/>
+      <path fill="#E0B190" d="M283 149l-13-1 1 41s3-9 5-9l2 2 2-4 3-10 1-1 1 1 8-16v-4l-10 1z"/>
+      <path fill="gray" stroke="#999" stroke-miterlimit="10" d="M285 169h-1 1z"/>
+      <path fill="none" stroke="#F276A0" stroke-miterlimit="10" stroke-width="4" d="M269 171h29"/>
+      <path fill="#F2EFDF" d="M108 347h96v3h-96z"/>
+      <path fill="#CCC" d="M108 350h96v3h-96z"/>
+      <path fill="#F2EFDF" d="M108 357h96v3h-96z"/>
+      <path fill="#CCC" d="M108 360h96v3h-96z"/>
+      <path fill="#F2EFDF" d="M108 367h96v3h-96z"/>
+      <path fill="#CCC" d="M108 370h96v3h-96z"/>
+      <path fill="#F2EFDF" d="M117 345h5v34h-5zm71 0h6v34h-6z"/>
+    </svg>
+    
+    <!-- ***************** TREE ********************* -->
+    <svg id="tree" xmlns="http://www.w3.org/2000/svg" viewBox="0, 0, 400, 400">
+    
+      <g class="leaves">
+        <path id="leaf1" d="M255 165l2-2-1-3-2-1-10-2 5 10 2 1h3l1-3z"/>
+        <path id="leaf2" d="M262 158l2-3-1-2-2-2-9-3 4 10 1 2h3l2-2z"/>
+        <path id="leaf3" d="M268 150l2-2v-3l-2-1-9-3 4 9 1 2h2l2-2z"/>
+        <path id="leaf4" d="M271 142l1-2v-2l-2-1-7-2 3 7 1 2h2l2-2z"/>
+        <path id="leaf5" d="M276 136l2-2-1-2-1-1-7-3 2 8 2 1h2l1-1z"/>
+        <path id="leaf6" d="M280 131l1-1 1-2-1-1-6-5v9l1 1 2 1 2-2z"/>
+        <path id="leaf7" d="M283 126l2-1 1-1-1-2-4-5-2 7 1 2h3z"/>
+        <path id="leaf8" d="M289 124l1 1 2-1 1-2-1-7-6 5v2l1 1 2 1z"/>
+        <path id="leaf9" d="M258 169l3-2h2l2 2 3 9c-4 0-7-1-10-3l-2-2v-3l2-1z"/>
+        <path id="leaf10" d="M265 161l2-3h2l2 2c2 3 4 5 5 9l-11-2-2-2v-2l2-2z"/>
+        <path id="leaf11" d="M271 153l2-2h2l2 1 4 8-9-1-2-2v-2l1-2z"/>
+        <path id="leaf12" d="M278 146l1-2h2l2 2 3 6-8-1-1-1v-2l1-2z"/>
+        <path id="leaf13" d="M283 140l1-2h2l2 1 4 7-9-2-1-1v-2l1-1z"/>
+        <path id="leaf14" d="M284 135l1-2h3l6 6-9 1-1-1-1-2 1-2z"/>
+        <path id="leaf15" d="M289 129v-2l2-1h2l5 4-7 2h-1l-1-2v-1z"/>
+        <path id="leaf16" d="M310 246c3-4-2-5-5-5l-3-1 4 7 1 1 2-1 1-1z"/>
+        <path id="leaf17" d="M315 241c4-3 0-5-2-6h-3c-3 2 0 7 4 7l1-1z"/>
+        <path id="leaf18" d="M320 235c3-4-3-4-5-5 2 2-2 5 4 6l1-1z"/>
+        <path id="leaf19" d="M322 229v-3c-2-1-3-2-4 0-1 1 0 3 1 5h2l1-2z"/>
+        <path id="leaf20" d="M326 225c1-4-3-4-5-5 2 2 0 7 4 6l1-1z"/>
+        <path id="leaf21" d="M328 221c4-3-2-6-4-7 0 3 1 5 3 8l1-1z"/>
+        <path id="leaf22" d="M330 216v-4l-1-2-2-1v4c0 2 0 3 2 4l1-1z"/>
+        <path id="leaf23" d="M333 214l2-1v-7l-3 3-1 4 2 1z"/>
+        <path id="leaf24" d="M312 248l2-1c1-1 3 0 3 1l2 4v3l-7-2-1-2v-1l1-2z"/>
+        <path id="leaf25" d="M317 243c4-5 6 3 8 5h-5l-3-1-1-3 1-1z"/>
+        <path id="leaf26" d="M322 237l2-2 4 7c-2-2-7 1-7-4l1-1z"/>
+        <path id="leaf27" d="M326 231c2-3 5 2 5 4h-5l-1-2 1-2z"/>
+        <path id="leaf28" d="M329 226c2-3 7 2 5 4-1 1-5 1-6-2l1-2z"/>
+        <path id="leaf29" d="M330 223c1-4 6 0 7 2-2 0-6 4-7 0v-2z"/>
+        <path id="leaf30" d="M334 218v-3c3 0 5 1 6 3-2 1-4 5-7 1l1-1z"/>
+        <path id="leaf31" d="M281 281c3 0 6 1 8-1 1-2 0-4-1-5-4-2-6 3-9 5l2 1z"/>
+        <path id="leaf32" d="M288 283c3 0 6-3 9-6-4 1-9 1-11 5l2 1z"/>
+        <path id="leaf33" d="M295 283c3 2 6 0 8-4-3 2-8 0-10 3l2 1z"/>
+        <path id="leaf34" d="M300 285c4 3 7 0 9-3-4 0-8-1-10 2l1 1z"/>
+        <path id="leaf35" d="M304 287c3 3 8 2 10-1h-10v1z"/>
+        <path id="leaf36" d="M310 290c1 5 6 1 8 0-3-2-6 0-9-1l1 1z"/>
+        <path id="leaf37" d="M311 293l-2 2 11 1-8-4-1 1z"/>
+        <path id="leaf38" d="M284 285c3-1 3 1 3 2-2 4-7 1-9 5 2-2 2-6 5-7h1z"/>
+        <path id="leaf39" d="M290 287h2c-1 5-4 5-8 5 1-2 2-4 5-5h1z"/>
+        <path id="leaf40" d="M296 288l1 3c-2 2-4 2-7 2 1-2 2-4 5-5h1z"/>
+        <path id="leaf41" d="M300 289l2 2-6 3c0-2 0-4 2-6l2 1z"/>
+        <path id="leaf42" d="M306 292c3 0 4 1 3 3l-4 2c-2 0-3-1-3-2l3-3h1z"/>
+        <path id="leaf43" d="M268 203l3-3-2-2c-3 1-2 3-2 5h1z"/>
+        <path id="leaf44" d="M271 201c2-1 2-3 2-5-1 1-3 3-2 6v-1z"/>
+        <path id="leaf45" d="M274 199c2-1 2-3 1-5l-2 5h1z"/>
+        <path id="leaf46" d="M277 198c2-1 2-3 2-5-2 2-3 3-3 5h1z"/>
+        <path id="leaf47" d="M279 197c2 0 3-2 3-4l-4 4h1z"/>
+        <path id="leaf48" d="M282 196c2 1 3-2 3-3-2 0-2 2-4 3h1z"/>
+        <path id="leaf49" d="M283 197v1l5-3-5 1v1z"/>
+        <path id="leaf50" d="M271 203h1c1 2-2 3-2 5v-4l1-1z"/>
+        <path id="leaf51" d="M274 202v-1c2 2 0 3-1 5v-4h1z"/>
+        <path id="leaf52" d="M276 200l1 1c0 1 0 2-2 3v-3l1-1z"/>
+        <path id="leaf53" d="M278 199h1l-1 3-1-2 1-1z"/>
+        <path id="leaf54" d="M281 198h2v3h-2l-1-2 1-1z"/>
+        <path id="leaf55" d="M348 248c2 0 3-2 2-4-1-3-2-6-9-4 2 3-2 9 5 10l2-2z"/>
+        <path id="leaf56" d="M357 243l3-3c-1-5-6-5-10-7 3 3-1 9 5 10h2z"/>
+        <path id="leaf57" d="M363 237l2-1c0-5-5-7-8-5-4 2 3 4 4 7l2-1z"/>
+        <path id="leaf58" d="M370 232c-1-1 2-4-2-6l-3-1-4-1 2 3c0 3 3 5 6 7l1-2z"/>
+        <path id="leaf59" d="M373 228c2-3 1-5 0-7l-3-2-4-1 2 3v3l4 5 1-1z"/>
+        <path id="leaf60" d="M376 222l1-4c0-3-4-6-7-8 2 3 0 7 2 10l2 2h2z"/>
+        <path id="leaf61" d="M380 219c7-1 0-7 3-10-3 2-8 5-5 9l2 1z"/>
+        <path id="leaf62" d="M368 242c2-3 4-3 6-1v6c-3 0-6 0-8-4l2-1z"/>
+        <path id="leaf63" d="M375 235l3-2c3 0 4 4 3 6-2 3-8 2-7-2l1-2z"/>
+        <path id="leaf64" d="M377 231c0-5 6-3 6 0 1 5-5 4-8 5l1-3 1-2z"/>
+        <path id="leaf65" d="M381 223c-1-5 6-2 8 0-3 1-5 4-8 2v-2z"/>
+        <path id="leaf66" d="M309 204l-1-2-1-1h-2l-6 4 7 3 2-1 1-1v-2z"/>
+        <path id="leaf67" d="M309 197v-2l-2-1h-2l-6 2 7 4h1l2-1v-2z"/>
+        <path id="leaf68" d="M309 190l-2-3c-3-1-5 3-8 3h2l1 1 4 2h1l1-1 1-2z"/>
+        <path id="leaf69" d="M308 184c-2 0-2-1-2-2-2 0-5 1-5 3 1 2 4 3 6 1l1-2z"/>
+        <path id="leaf70" d="M308 178l-1-2c-3-2-4 1-6 3h2l2 1h3v-2z"/>
+        <path id="leaf71" d="M307 175l-1-3h-6c1 3 3 7 7 4v-1z"/>
+        <path id="leaf72" d="M307 170v-1c-1-2-4-2-6-2 1 2 2 4 5 4l1-1z"/>
+        <path id="leaf73" d="M308 167c3 0-1-2 1-3l-4-3c0 3-1 5 2 6h1z"/>
+        <path id="leaf74" d="M312 204v-2l1-1h2l6 4-7 3-1-1-2-1 1-2z"/>
+        <path id="leaf75" d="M312 197v-2l1-1h2l6 2-6 4h-2l-1-1v-2z"/>
+        <path id="leaf76" d="M312 190v-2c-1-1-1-2 2-2l1 1 2 1h2l1 1c-1 2-3 3-6 4h-1l-1-1v-2z"/>
+        <path id="leaf77" d="M313 183c-1-1-1-2 1-3l2 1 2 1c3 1-1 2-1 3h-2l-1 1-1-1v-2z"/>
+        <path id="leaf78" d="M312 177v-2l2-1c1 1 3 3 5 3l-3 2h-1l-2-1-1-1z"/>
+        <path id="leaf79" d="M311 175c-2-3 1-3 3-4h2l2 1-3 3-1 1h-3v-1z"/>
+        <path id="leaf80" d="M310 169l-1-2c2-2 4 0 6-1-1 3-3 4-4 4l-1-1z"/>
+        <path id="leaf81" d="M331 203l-2-3-1-1h-3v2c0 2 1 4 5 3l1-1z"/>
+        <path id="leaf82" d="M333 198l1-1v-1h-1c-2-1-4-2-4 1l1 2h2l1-1z"/>
+        <path id="leaf83" d="M336 194l1-1c-1-3-3 1-5 0 0 2 1 3 3 2l1-1z"/>
+        <path id="leaf84" d="M338 191l-1-2-3 1c0 2 1 2 3 2l1-1z"/>
+        <path id="leaf85" d="M340 188l-1-2-2 1c0 2 2 2 3 2v-1z"/>
+        <path id="leaf86" d="M341 186c1-2-1-2-3-3 0 1-1 4 2 4l1-1z"/>
+        <path id="leaf87" d="M343 183c2-2-2-2-3-3 0 1 0 3 2 4l1-1z"/>
+        <path id="leaf88" d="M345 182c3 0 1-2 1-3l-1-2v2l-1 1v2h1z"/>
+        <path id="leaf89" d="M332 204v-2c5-1 2 4 4 6-2 0-6 1-5-3l1-1z"/>
+        <path id="leaf90" d="M334 199l2-1h1l1 1 1 3c-1 1-3-2-5-2v-1z"/>
+        <path id="leaf91" d="M338 195c3-2 3 2 5 3-2-1-4 1-6-2l1-1z"/>
+        <path id="leaf92" d="M341 192h1c1 1 2 1 2 3-1 0-3 1-3-2v-1z"/>
+        <path id="leaf93" d="M343 189v-1c2 1 1 4 3 4-2 0-4 1-4-2l1-1z"/>
+        <path id="leaf94" d="M343 187v-1l3 2c0 1-2 3-3 0v-1z"/>
+        <path id="leaf95" d="M345 184c0-2 2-2 3 0 0 2-3 1-4 1l1-1z"/>
+        <path id="leaf96" d="M235 176v-2l2-1 2 1 3 2-6 2h-1l-1-1 1-1z"/>
+        <path id="leaf97" d="M234 171v-2c3 0 6-1 8 1-1 1-2 3-5 3h-1l-2-1v-1z"/>
+        <path id="leaf98" d="M233 165v-2h4l2 1h1c-2 1-4 4-7 2v-1z"/>
+        <path id="leaf99" d="M233 161l1-2 3 1v1l1 1h-5v-1z"/>
+        <path id="leaf100" d="M231 157c2-4 5 1 8 0-2 1-4 2-7 1l-1-1z"/>
+        <path id="leaf101" d="M229 155c0-4 5-3 7-3-1 3-7-1-6 3h-1z"/>
+        <path id="leaf102" d="M232 177v-2l-1-1h-2l-1 1-3 2 5 2h1l1-1v-1z"/>
+        <path id="leaf103" d="M232 172c-1-3-3-2-4-2l-3 1c2 2 4 5 7 2v-1z"/>
+        <path id="leaf104" d="M231 166c0-3-3-1-5 0 2 1 3 4 6 2l-1-2z"/>
+        <path id="leaf105" d="M231 163l-1-2-2-1-2 2c1 1 1 5 5 2v-1z"/>
+        <path id="leaf106" d="M230 158l-1-3-3 1-1 2 1 1 2 1 2-1v-1z"/>
+        <path id="leaf107" d="M228 156c0-2-2-3-3-2 0 1 1 3 4 2h-1z"/>
+        <path id="leaf108" d="M226 153l-1-4h-1v3l2 1z"/>
+        <path id="leaf109" d="M227 152l3-2c0-1-2-2-3-1v3z"/>
+        <path id="leaf110" d="M269 252v-2l2-1 2 1 5 3-7 2h-1l-1-1v-2z"/>
+        <path id="leaf111" d="M269 246v-2l1-1h2l6 2-6 4-2-1-1-1v-1z"/>
+        <path id="leaf112" d="M269 239v-2h3l5 2-5 3h-1l-2-1v-2z"/>
+        <path id="leaf113" d="M270 233v-1l1-1h1l5 2-5 2h-1l-1-1v-1z"/>
+        <path id="leaf114" d="M270 228v-2l1-1h1l5 2-5 3h-1l-1-1v-1z"/>
+        <path id="leaf115" d="M269 225l-1-1 1-1h6l-4 4h-2v-2z"/>
+        <path id="leaf116" d="M269 220l-1-1v-1l1-1h5l-3 4h-2v-1z"/>
+        <path id="leaf117" d="M265 252l-1-2h-2l-5 3 6 2h1l1-1v-2z"/>
+        <path id="leaf118" d="M265 246v-2l-1-1h-2l-5 3 5 3h2l1-1v-2z"/>
+        <path id="leaf119" d="M265 240l-1-2h-2l-5 2 5 2h2l1-2z"/>
+        <path id="leaf120" d="M264 234v-1l-1-1h-1l-4 2 4 3 1-1h1v-2z"/>
+        <path id="leaf121" d="M264 229v-1l-1-1h-1l-4 2 4 3 1-1h1v-2z"/>
+        <path id="leaf122" d="M265 227v-2h-6l4 4h1l1-1v-1z"/>
+        <path id="leaf123" d="M265 222l1-1v-1l-1-1h-4l2 4h2v-1z"/>
+        <path id="leaf124" d="M172 169c-1-2-2-4 0-6 4-3 7 1 11 1-3 3-4 11-10 8l-1-3z"/>
+        <path id="leaf125" d="M168 160c-3-6 6-9 8-6 3 3-1 10-7 8l-1-2z"/>
+        <path id="leaf126" d="M163 151l-1-3c2-3 7-6 9-3 3 2-2 9-7 8l-1-2z"/>
+        <path id="leaf127" d="M162 143c-2-7 6-6 9-6-3 2-2 11-8 7l-1-1z"/>
+        <path id="leaf128" d="M159 135c-3-7 6-6 9-6-1 4-4 7-8 8l-1-2z"/>
+        <path id="leaf129" d="M158 130c-4-5 3-8 7-9-2 3 0 9-6 10l-1-1z"/>
+        <path id="leaf130" d="M157 123c-4-4 2-6 4-9 0 3 2 10-3 10l-1-1z"/>
+        <path id="leaf131" d="M153 119c-6-1-2-7 0-10 1 3 3 6 2 10h-2z"/>
+        <path id="leaf132" d="M169 172l-2-3c-3-1-5 1-6 4-2 2-2 6-3 8l8-2c3 0 4-2 4-5l-1-2z"/>
+        <path id="leaf133" d="M165 162c-1-1-2-3-4-3-4 1-7 6-8 10 3-1 13 3 13-4l-1-3z"/>
+        <path id="leaf134" d="M159 154c-4-6-9 0-11 5 4-1 10 2 12-3l-1-2z"/>
+        <path id="leaf135" d="M155 145l-2-3c-4 1-7 4-7 8 4 1 8 2 10-3l-1-2z"/>
+        <path id="leaf136" d="M152 137l-1-2c-5 0-7 4-9 8 3 0 8 2 11-4l-1-2z"/>
+        <path id="leaf137" d="M153 133c-1-6-6-1-9 1 3 3 6 5 9 1v-2z"/>
+        <path id="leaf138" d="M151 124v-4c-3-1-7 1-7 3-1 3 4 5 7 3v-2z"/>
+        <path id="leaf139" d="M95 271l-2-3 1-2 1-2 8-2-3 10-2 1h-2l-1-2z"/>
+        <path id="leaf140" d="M89 264l-2-2v-3l2-1 6-4-1 10-2 2h-1l-2-2z"/>
+        <path id="leaf141" d="M83 256l-1-2v-2l1-2 6-3-1 9-2 2h-1l-2-2z"/>
+        <path id="leaf142" d="M80 249l-1-2v-1l1-2 5-3-1 8-1 1h-1l-2-1z"/>
+        <path id="leaf143" d="M76 243l-2-1v-2l1-2 6-3-2 8-1 2h-1l-1-2z"/>
+        <path id="leaf144" d="M73 239l-2-1v-4l4-4 1 8-1 1-1 1-1-1z"/>
+        <path id="leaf145" d="M69 234l-1-1-1-1v-2l3-5 2 7-1 2-1 1-1-1z"/>
+        <path id="leaf146" d="M65 233h-3v-2l-1-7 5 5 1 1-1 2-1 1z"/>
+        <path id="leaf147" d="M93 274l-2-1h-2l-1 2-2 10c3-1 6-2 8-5l1-2v-2l-2-2z"/>
+        <path id="leaf148" d="M87 267l-1-2h-2l-2 2-2 9 8-3 1-1v-3l-2-2z"/>
+        <path id="leaf149" d="M81 260l-1-2h-2l-1 2-3 8 7-2 2-2v-2l-2-2z"/>
+        <path id="leaf150" d="M76 254l-2-2h-1l-1 1-2 8 6-2 1-2v-2l-1-1z"/>
+        <path id="leaf151" d="M71 248l-2-2h-1l-1 1-2 7c2 0 4 0 6-2l1-1v-2l-1-1z"/>
+        <path id="leaf152" d="M70 244l-1-2-1-1-2 1-3 5 6 1 1-1 1-2-1-1z"/>
+        <path id="leaf153" d="M65 237v-2l-2-1-1 1-4 4 6 2 1-1v-3z"/>
+        <path id="leaf154" d="M172 222l-2-2v-1l1-1 4-3v7l-1 1h-1l-1-1z"/>
+        <path id="leaf155" d="M167 218l-2-1v-2l1-1 3-3 1 7-1 1h-1l-1-1z"/>
+        <path id="leaf156" d="M162 214l-1-1-1-1 1-2 3-3 1 7-1 1h-1l-1-1z"/>
+        <path id="leaf157" d="M159 210l-1-1v-3l3-2v6h-2z"/>
+        <path id="leaf158" d="M155 207l-1-1v-3l3-2v6h-2z"/>
+        <path id="leaf159" d="M153 204h-2v-2l2-4 2 5-1 1v1l-1-1z"/>
+        <path id="leaf160" d="M150 202l-1-1h-1v-2l1-4 2 5v2h-1z"/>
+        <path id="leaf161" d="M147 201l-1 1h-1l-1-1-1-5 4 2v3z"/>
+        <path id="leaf162" d="M171 224h-3v8l4-4 1-1-1-2-1-1z"/>
+        <path id="leaf163" d="M166 220l-1-1-2 1v1l-1 6 5-2 1-2-1-1-1-2z"/>
+        <path id="leaf164" d="M161 217l-1-1h-1l-1 1v6l4-3 1-1-1-1-1-1z"/>
+        <path id="leaf165" d="M157 213h-2l-1 1v5l3-3h1l-1-2v-1z"/>
+        <path id="leaf166" d="M153 210l-1-1h-1l-1 2v4l3-2 1-1v-1l-1-1z"/>
+        <path id="leaf167" d="M151 208v-2h-1l-1 1-2 4h4l1-1v-1l-1-1z"/>
+        <path id="leaf168" d="M147 204v-1h-2l-2 3 4 1 1-1v-1l-1-1z"/>
+        <path id="leaf169" d="M120 294h-1l-2-1v-2l1-4 4 4v3h-2z"/>
+        <path id="leaf170" d="M115 295h-1l-1-1-1-1v-5l4 4 1 2v1h-2z"/>
+        <path id="leaf171" d="M110 296h-1l-1-1v-5l4 3v1l-1 1-1 1z"/>
+        <path id="leaf172" d="M106 295l-1 1-1-1v-5l3 3v2h-1z"/>
+        <path id="leaf173" d="M102 296l-1 1-1-1v-5l3 3v2h-1z"/>
+        <path id="leaf174" d="M99 297h-1l-1-1-1-3 4 2v1l-1 1z"/>
+        <path id="leaf175" d="M96 297l-1 1h-1v-1l-2-3 4 1v2c1 0 0 0 0 0z"/>
+        <path id="leaf176" d="M94 299v2h-1l-3-2 3-2 1 1v1z"/>
+        <path id="leaf177" d="M121 296h-1v3l5 4v-6l-1-1-1-1-2 1z"/>
+        <path id="leaf178" d="M116 297h-1v3l3 4 1-5v-1l-1-1h-2z"/>
+        <path id="leaf179" d="M112 298h-2v3l3 3 1-4v-1l-1-1h-1z"/>
+        <path id="leaf180" d="M107 300h-1v2l3 3v-5l-1-1-1 1z"/>
+        <path id="leaf181" d="M103 300l-1 1v2l2 3 1-4v-1l-1-1h-1z"/>
+        <path id="leaf182" d="M101 300h-2v1l2 4 2-4-1-1h-1z"/>
+        <path id="leaf183" d="M97 300h-1l-1 1v4l3-3-1-1v-1z"/>
+        <path id="leaf184" d="M99 250v-1l1-1h1l4 1-4 3h-1l-1-1v-1z"/>
+        <path id="leaf185" d="M99 246v-1l1-1h1l4 1-4 3h-1l-1-1v-1z"/>
+        <path id="leaf186" d="M99 243v-1l1-1h5l-4 3h-1l-1-1z"/>
+        <path id="leaf187" d="M100 240l-1-1 1-1h1l3-1-2 3-1 1h-1v-1z"/>
+        <path id="leaf188" d="M99 238l-1-1h-1l1-1 2-3 1 4h-1l-1 1z"/>
+        <path id="leaf189" d="M95 250v-1l-1-1h-1l-4 2 4 1h2v-1z"/>
+        <path id="leaf190" d="M95 246v-2h-2l-4 2 4 1h2v-1z"/>
+        <path id="leaf191" d="M96 244l1-1-1-1h-5l3 3h2v-1z"/>
+        <path id="leaf192" d="M97 239v-1l-1-1h-3l2 3h1l1-1z"/>
+        <path id="leaf193" d="M158 259l-1-1 1-1v-1h3l-1 5h-1v-1l-1-1z"/>
+        <path id="leaf194" d="M156 255l-1-2v-1h4l-1 4h-2v-1z"/>
+        <path id="leaf195" d="M154 251v-1l-1-1 1-1 2-1v5h-1l-1-1z"/>
+        <path id="leaf196" d="M153 247h-1v-2l2-2v5h-1v-1z"/>
+        <path id="leaf197" d="M151 245h-1l-1-1v-5l2 4 1 1-1 1z"/>
+        <path id="leaf198" d="M155 260v-1h-2l-1 3 3 1h1v-1l-1-2z"/>
+        <path id="leaf199" d="M153 255l-1-1h-1l-1 3 3 1 1-1-1-2z"/>
+        <path id="leaf200" d="M153 253l-1-1v-1h-1l-2 2 3 2h1v-2z"/>
+        <path id="leaf201" d="M151 248l-1-2-1-1-2 2 3 2v1l1-1v-1z"/>
+        <path id="leaf202" d="M153 267h-1l-1-1 1-2 2-3 1 5v1h-2z"/>
+        <path id="leaf203" d="M149 266l-1-1v-2l2-3 1 4v1l-1 1h-1z"/>
+        <path id="leaf204" d="M147 264h-1l-1-1v-1l1-3 2 4v1h-1z"/>
+        <path id="leaf205" d="M144 263h-1l-1-1v-4l3 3v1l-1 1z"/>
+        <path id="leaf206" d="M141 263l-1 1h-1l-2-4 4 1v1h1l-1 1z"/>
+        <path id="leaf207" d="M151 271l-1-1-1 1v5l3-3v-2h-1z"/>
+        <path id="leaf208" d="M147 269h-1l-1 1v5l4-3v-1l-1-1-1-1z"/>
+        <path id="leaf209" d="M146 267h-2l-1 1v4l3-2 1-1v-1l-1-1z"/>
+        <path id="leaf210" d="M142 266l-1-1h-1l-1 4 3-1 1-1v-1h-1z"/>
+        <path id="leaf211" d="M117 168l-1-2h-2l-1 1-5 4 8 1 1-1 1-1-1-2z"/>
+        <path id="leaf212" d="M114 162l-1-2h-3l-5 5 7 1 2-1 1-2-1-1z"/>
+        <path id="leaf213" d="M112 157l-1-1-1-1h-2l-5 3 6 3 2-1 1-1v-2z"/>
+        <path id="leaf214" d="M109 153v-2l-1-1h-2l-6 2 6 3h1l1-1 1-1z"/>
+        <path id="leaf215" d="M109 148l1-1v-2l-1-1-6-2 2 6 1 1h2l1-1z"/>
+        <path id="leaf216" d="M119 158l-1-2 1-2h2l6-1-4 6-1 1-2-1-1-1z"/>
+        <path id="leaf217" d="M116 156l-1-2v-1l1-2 6-2-2 7-1 1h-2l-1-1z"/>
+        <path id="leaf218" d="M113 149l-2-1v-1l1-1 5-4-1 7-1 1h-1l-1-1z"/>
+        <path id="leaf219" d="M263 196l1-1v-2l-1-1-4-2 1 6v1h2l1-1z"/>
+        <path id="leaf220" d="M267 192l1-2 1-1-1-1-5-3 1 7 1 1h1l1-1z"/>
+        <path id="leaf221" d="M270 189l1-1 1-2-1-1-3-4-1 6v1l1 1h2z"/>
+        <path id="leaf222" d="M273 185l1-1 1-1v-1l-3-4-1 5v1l1 1h1z"/>
+        <path id="leaf223" d="M277 184h2l1-2v-5l-4 3-1 2 1 1 1 1z"/>
+        <path id="leaf224" d="M271 195l1-1h2l1 1 2 6-6-2-1-1v-2l1-1z"/>
+        <path id="leaf225" d="M272 192l1-1 1-1 2 1 3 4-6 1-1-1v-3z"/>
+        <path id="leaf226" d="M277 187v-1l1-1 1 1 4 3-5 1h-1l-1-1 1-2z"/>
+        <path id="leaf227" d="M214 125l1-1 1-2-1-2-6-4 1 9 1 2h2l1-2z"/>
+        <path id="leaf228" d="M217 119l1-2v-1l-1-2-5-3 1 8 1 1h2l1-1z"/>
+        <path id="leaf229" d="M222 114l1-2v-1l-1-2-5-3 1 8 1 1h1l2-1z"/>
+        <path id="leaf230" d="M225 110l1-1 1-1-1-2-4-5-1 8 1 1 1 1 2-1z"/>
+        <path id="leaf231" d="M228 106l1-1 1-1v-2l-3-5-2 7 1 1 1 1h1z"/>
+        <path id="leaf232" d="M232 105h2l1-1 1-7-5 4-1 1 1 2 1 1z"/>
+        <path id="leaf233" d="M221 123l2-1h1l1 1 2 7-6-2-1-2v-1l1-2z"/>
+        <path id="leaf234" d="M226 118l1-1h1l1 1 2 7-6-3v-3l1-1z"/>
+        <path id="leaf235" d="M227 114l1-1 1-1 1 1 3 6h-5l-1-1-1-2 1-2z"/>
+        <path id="leaf236" d="M232 109v-2h2l4 4-5 2-1-1-1-1 1-2z"/>
+        <path id="leaf237" d="M191 130v-3l-1-1-2-1-8 2 7 6h2l2-1v-2z"/>
+        <path id="leaf238" d="M195 122v-2l-1-2h-3l-7 2 7 5 2 1 1-2 1-2z"/>
+        <path id="leaf239" d="M197 114v-2l-1-1-2-1-7 2 6 5h2l2-1v-2z"/>
+        <path id="leaf240" d="M196 108v-2l-1-1h-2l-6 1 5 4 2 1 1-1 1-2z"/>
+        <path id="leaf241" d="M197 101v-1l-1-2h-2l-6 2 6 4h1l1-1 1-2z"/>
+        <path id="leaf242" d="M197 97l1-2-1-1-1-1h-6l3 5 2 1 1-1 1-1z"/>
+        <path id="leaf243" d="M197 92l1-2v-1l-1-1-5-2 2 6 1 1h1l1-1z"/>
+        <path id="leaf244" d="M200 88h2v-3l-3-5-2 6v1l1 1h2z"/>
+        <path id="leaf245" d="M198 123v-2l2-1h2l7 4-8 3h-2l-1-2v-2z"/>
+        <path id="leaf246" d="M201 115v-2l1-1h2l7 4-8 3h-1l-1-2v-2z"/>
+        <path id="leaf247" d="M202 108v-2l2-1h1l6 3-7 3-1-1-1-1v-1z"/>
+        <path id="leaf248" d="M203 101v-2l1-1h2l5 3c-1 2-4 3-6 3h-1l-1-1v-2z"/>
+        <path id="leaf249" d="M202 98l-1-2 1-1h2l6 1-5 4h-3v-2z"/>
+        <path id="leaf250" d="M202 91v-3h7l-3 4-2 1-1-1-1-1z"/>
+        <path id="leaf251" d="M179 237h-3l-1 1v1l2 3 5-3v-1l-1-1h-2z"/>
+        <path id="leaf252" d="M171 237h-4v1l2 3c2 0 4-1 5-3l-1-1h-2z"/>
+        <path id="leaf253" d="M165 237h-4v4l6-2 1-1-1-1h-2z"/>
+        <path id="leaf254" d="M159 237h-5l-1 3 7-1v-2h-1z"/>
+        <path id="leaf255" d="M154 236l-1-1h-3l-5 2h9v-1c1 0 0 0 0 0z"/>
+        <path id="leaf256" d="M178 234l-3-1h-1v-1l3-3 4 3v1l-1 1h-2z"/>
+        <path id="leaf257" d="M169 234l-2-1h-1v-1l3-3 4 3v1l-1 1h-3z"/>
+        <path id="leaf258" d="M166 234l-2 1-2-1-1-1 1-3 6 3h1l-1 1h-2z"/>
+        <path id="leaf259" d="M157 234l-1 1-2-1h-1v-3l6 2v1h-2z"/>
+      </g>
+      <g>
+          <path fill="sienna" d="M232 274c-1-20-7-39-19-56-7-11-16-21-25-31-12-12-22-25-28-41-3-5-4-11-5-17l1 11c7 22 21 40 36 57l16 18 1 1 14 31c5 6 6 13 4 20l-1 4v8l-3 23-1 7 1 2-2-1-2-4-3-2-3-2v-1l-7-4-19-6 1 2h-3l-6-3h-2l-37-1c-13-1-25-5-36-12v-1h-1l-2-1-1-1c-12-8-21-19-29-32v-1h-1l-2-5 1 4 1 4 2 3v1l4 3-1 1 1 2 1-2v2l2 1h-2l1 1h2l16 17c19 16 41 21 65 20 11 0 24 9 24 9l21 9 2 2 7 10c0 1-10 18-15 48a232 232 0 0 0-2 25c1 3 3 4 8 6l18-1-3-13v-33l4-26 7-55zm-24 33v1-1zm16 95zm6-99c0 1 0 1 0 0z"/>
+    
+          <path fill="saddlebrown" d="M357 243l-20 7-25 3h-1l6-7c7-10 14-21 16-33v-1l-4 8c-9 18-23 34-41 45l8-12 3-5-4-3c-1 3-14 21-19 26-6 6-14 11-21 16 6-10 10-21 12-32l-2-1-7 19c-4 10-10 18-18 25l-1 1-2 2c2-16 2-31-2-46-1-4-4-8-4-12 1-5 2-11 5-15 7-10 14-20 28-22 6-1 11-5 16-8l-20 7h-1c10-6 15-15 19-25v-1 1c-6 11-14 20-24 26s-19 13-25 23l-2 4v-5c-1-13 2-25 7-36h-1v-1h-1l-1 1a73 73 0 0 0-8 33v3l-3-5v-2c-7-7-12-16-19-22-10-10-17-20-17-34 0-7-1-14 4-19 4-4 9-6 13-8 13-7 23-15 27-29l-10 14-25 16-4 2 2-5a83 83 0 0 0 8-49c0 17-3 34-11 49-6 11-10 23-8 37l1 4-3-4a93 93 0 0 1-23-50h-1v6l1 1 4 16c7 16 17 29 28 41l26 31c12 17 18 36 18 56 1 10-6 49-6 51l-1 5-3 25v2a245 245 0 0 0 0 31c0 5 2 9 3 14v1l14-4 1-4-2-5c-6-17-7-35-6-52l6-21 2-3 2-3 2-3 1-1c17-21 40-25 63-16l2 1-2-2c-10-7-22-8-34-7v-1l14-9c7-5 14-10 23-13 7-3 15-3 22-5l25-8v-4zM155 128zm75 176zm35-51l2 2-2-2zm31 0zm-110 49l-16-9h-9c-24 1-46-4-65-20l-16-17h-2c12 16 27 28 46 35h1-1l-20 7 1 1 12-3c7-2 14-4 21-1l15 2c11 2 23 2 34 5h-1z"/>
+          <path fill="brown" d="M223 247c5 6 6 13 4 20v11l-1 1v-12c-2-9-7-16-14-20-8-4-15-8-23-10-5-2-10 0-15 0l-17-1-1-1h1l25-1h1l-1-1c-14-7-26-18-34-32 15 20 36 31 59 38 5 1 11 5 16 8z"/>
+          <path fill="brown" d="M208 308h-3l-3 1 3 2h1v-1l2-2zM78 255z"/>
+          <path fill="brown" d="M192 197l16 16 1 2h-1a95 95 0 0 0-41-23l-24-7-1-1-1-1-3-4 17 6c13 3 26 6 37 13v-1zm120-12l-2 30v1h1c10-6 20-14 27-24 3-3 4-7 6-10h1l-4 8c-8 13-19 22-32 30l-1 4-9 24-4-3 2-3 10-27 3-23a64 64 0 0 0 0-1v-7l2 1zM187 291l1 2h-3l-6-3-16-16c-2-2-6-1-9-2l-15-8 21 7h1l-1-1-8-16-1-6v-1 1l7 14c7 12 18 21 29 29z"/>
+          <path fill="brown" d="M233 191l1 1v-1h-1zm0-3l1-1 1-1v-1l-1-2-2-1-4 10-7 17-1 12v2l3 5v-7c0-11 4-20 8-30h2l2 1v-2l-2-2z"/>
+          <path fill="brown" d="M235 186c-1-5 2-7 5-9l32-29c5-5 9-13 13-19l-8 15-26 26-16 16z"/>
+          <path fill="saddlebrown" d="M133 180l-2-2v-1l-3-1c-9-7-15-17-19-27l-1-3 1 3c5 10 11 18 20 24l-2-19v-1 1l5 21 1 1v4zm108-3l15-13 22-22 7-13v-1l-3 8c-6 12-16 21-26 30l-10 10-3 1-1 1h-1v-1zm-9-1c0-9-1-17-5-25 5 7 8 16 8 25h-3zM104 276l-3-1c-4-11-7-22-3-34-3 12 0 24 5 35h1zm260-37l3-2h2l-1-1 12-17c-2 9-7 16-14 21l-2-1z"/>
+          <path fill="brown" d="M133 180v-4l5 3 3 4 1 1-9-4z"/>
+          <path fill="saddlebrown" d="M237 182l5-5 4-2-11 15-2-2 1-1 1-1v-1l2-3z"/>
+          <path fill="black" d="M269 239l-1 9-2-2 1-9 2 2zm-165 59l1 1H93l11-1z"/>
+          <path fill="brown" d="M269 239l-2-2-1-16 3 15v3zm-34-58l-1 2-2-1v-3l3-1v3zM68 236l1 4 2 4-6-13 3 5zm198 10l2 2v4h-3l1-6zm94-4l2-1 2 1-4 3v-3zm-50-60l-1-4 2 1 1 4-2-1z"/>
+          <path fill="brown" d="M311 179l-2-1v-4l1-2 1 7zm49 66l-2 1-1-3 3-1v3z"/>
+          <path fill="brown" d="M268 252l-1 3-2-2v-1h3zm28 2zm-2-1zm2 0zm68-11l-2-1 2-2 2 1-2 2zm-129-64l-3 1v-3h3v2z"/>
+          <path fill="#000" d="M310 182l2 1v2l-2-1v-2zm-182-6l3 1v1l-3-2zm27-53h-1v-5 1l1 1v3z"/>
+          <path fill="brown" d="M243 308l-2 3v-1l2-2zm-5 9zM77 254v-2 2l2 1h-2v-1zm16 45v1l-4-1h4z"/>
+          <path fill="saddlebrown" d="M139 264v-1 1zm90-156h-1c1 0 0 0 0 0h1zm152 111zm-233-18v-1c0 1 0 0 0 0v1zm130-22zM72 247zm157-139zm-20 108zm72-18v-1 1zm-46-6v-1 1zM78 255zm61 9z"/>
+        </g>
+      </svg>
+    
+    <!-- ************* MOON ************** -->
+    <svg id="moon" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0, 0, 400 400" preserveAspectRatio="xMidYMid meet">
+      <defs>      
+       <linearGradient id="moon-gradient" x1="0%" x2="100%" y1="0%" y2="0%" spreadMethod="pad">
+        <stop offset="0%" id="color-left" stop-color="rgba(60,0,0,0.4)"/>
+        <stop offset="80%" id="color-right" stop-color="black"/>
+       </linearGradient>
+      </defs>
+    
+      <image id="moon-img" xlink:href="https://dl.dropbox.com/s/d76v8046ilxmhni/fullmoon.png?dl=0"/>
+      <circle cx="200" cy="200" r="185"  style="stroke: none; fill: url(#moon-gradient)"/>
+    </svg>
+    
+    <!-- *************LAND************** -->
+    <svg id="landscape" xmlns="http://www.w3.org/2000/svg" viewBox="0,0, 800, 150" width="800" height="150" preserveAspectRatio="none ">
+      <path fill="#2C2C35" d="M18 3h17l14 4c10 7 19 12 28 16 41 15 72 28 115 26 42-3 56-5 84-15l19 2 57 12a511 511 0 0 0 146 7l35-3h5c30 3 60-2 90-6l15 7c24 9 49 20 74 25 26 6 53 10 79 9h3v58H-1V11l19-8z"/>
+      <path fill="#365432" d="M39 95l9-2 40-4h28c11 3 21 5 32 6a623 623 0 0 0 67 17c30 4 62 9 93 6l15-1h8l8-1 37-4 10-2c48-2 95-10 143-8 21 0 42 6 63 6h11l80 1c11 0 22 4 32 6h7c25 5 50 1 75 4h1v29c-26 4-799 0-799 0v-47c14-1 27-3 40-6z"/>
+    </svg>
+    
+    <!-- ************* STARS ************** -->
+    <svg id="stars" xmlns="http://www.w3.org/2000/svg" 
+         viewBox="0,0,1100,800"
+         preserveAspectRatio="none"
+         >
+      <g>
+        
+        <path id="star1" d="M666 463l2 3-4-2"/>
+        <path id="star2" d="M351 53l-1 1-1-1"/>
+        <path id="star3" d="M102 174l-1 1-1-1"/>
+        <path id="star4" d="M982 354v1l-1-1"/>
+        <path id="star5" d="M1091 154l-1 1-1-1"/> 
+        <path id="star6" d="M311 300l-1 1-1-1"/> 
+        <path id="star7" d="M769 511v1l-1-1"/>
+        <path id="star8" d="M970 459l-1-1 1-1"/>
+        <path id="star9" d="M716 92v1l-1 1"/>
+        <path id="star10" d="M405 487l-1-1 2-1"/>
+        <path id="star11" d="M889 233l1 1-1 1"/>
+        <path id="star12" d="M638 386v-1l2 1"/>
+        <path id="star13" d="M1014 4h-1V2"/>
+        <path id="star16" d="M650 398l-2 1v-1"/>
+        <path id="star17" d="M385 203v1h-1"/>
+    
+        <path id="star18" d="M803 450h-1v-1"/>
+        <path id="star19" d="M515 645v-1"/>
+    
+    <!--     <path d="M190 412l1 1-1"/> -->
+      </g>
+    </svg>
+    
+    <script src="./build/js/app.min.js"></script>
+  </body>
+</html>

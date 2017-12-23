@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+/* general styles *******/
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #010301;
+  position: relative;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 300;
+  background: radial-gradient(200vw at 100% 200%, #61382f 10%, black 40%); }
+
+#stars {
+  fill: white;
+  width: 100vw;
+  height: 98vh; }
+
+#landscape {
+  width: 105vw;
+  position: absolute;
+  bottom: -2vh; }
+
+#moon {
+  position: absolute;
+  right: 2vw;
+  top: 2vw;
+  width: 20vw;
+  height: 20vh; }
+
+#tree {
+  position: absolute;
+  bottom: 2vh;
+  left: 12vw;
+  width: 20vw;
+  /*   height: 10vh; */
+  z-index: 10; }
+
+.leaves {
+  fill: green; }
+
+#house {
+  position: absolute;
+  bottom: 1vh;
+  left: 20vw;
+  width: 40vw;
+  z-index: 8; }
+
+#alien {
+  position: absolute;
+  bottom: 0;
+  right: 80vw;
+  height: 20vh;
+  width: 20vw;
+  z-index: 8;
+  animation: upDown 10s ease-in-out infinite;
+  z-index: -1; }
+
+.myFlare {
+  opacity: .8; }
+
+@keyframes upDown {
+  0% {
+    bottom: 0;
+    transform: rotate3d(1, 1, 2, 0deg); }
+  25% {
+    transform: rotate3d(1, 1, 2, 5deg); }
+  50% {
+    bottom: 100px;
+    transform: rotate3d(1, 1, 2, 5deg); }
+  75% {
+    transform: rotate3d(1, 1, 2, -5deg); }
+  100% {
+    bottom: 0;
+    transform: rotate3d(1, 1, 2, 0deg); } }
+
+@keyframes myship {
+  0%, 100% {
+    right: 0;
+    bottom: -.5vh;
+    transform: rotate3d(1, 1, 2, 5deg); }
+  33% {
+    right: 20px;
+    bottom: 1vh;
+    transform: rotate3d(1, 1, 2, -5deg); }
+  66% {
+    right: 10px;
+    bottom: 1vh;
+    transform: rotate3d(1, 1, 2, 5deg); } }
+
+#twinkleBtn {
+  width: 8vw;
+  height: 5vh;
+  background: navy;
+  color: wheat;
+  position: absolute;
+  top: 0;
+  left: 25vw; }
+
+#twinkleBtn:hover {
+  background-color: black; }
+
+#star9 {
+  /*   fill: fuchsia; */
+  /*  animation: upDown 1s ease-in-out infinite; */ }
+
+#star1,
+#star2,
+#star3,
+#star4,
+#star5,
+#star6,
+#star7,
+#star8,
+#star9,
+#star10,
+#star11,
+#star12,
+#star13,
+#star16,
+#star17,
+#star18,
+#star19 {
+  fill-opacity: 1;
+  fill: white; }
+
+button {
+  background-color: #ebb861;
+  background-color: purple;
+  width: 8vw;
+  height: 4vh; }
+
+h1.title-lg {
+  color: #e6d8cc !important; }
+
+img {
+  width: 10vw; }
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr 50vw 1fr;
+  grid-template-rows: 10vh repeat(4, 20vh) 10vh; }
+
+.col-ctr {
+  grid-column: 2/3;
+  border: 1px solid fuchsia; }
+
+.row-2 {
+  grid-row: 2;
+  background-color: navy;
+  color: #e6d8cc; }
+
+/*# sourceMappingURL=styles.css.map */
