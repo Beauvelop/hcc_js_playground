@@ -11,8 +11,8 @@ var gulp = require('gulp'),
 gulp.task('concatScripts', () =>
   gulp.src(['js/jquery-3.2.1.min.js',
             'js/tweenMax.min.js',
+            'js/general.js',
             'js/stars.js',
-            'js/secondJS.js',
             'js/thirdJS.js'])
     .pipe(concat('app.js')) //takes str that will name concatted file
     .pipe(gulp.dest('./build/js'))

@@ -12,7 +12,7 @@ body {
   font-weight: 300;
   background: radial-gradient(200vw at 100% 200%, #61382f 10%, black 40%); }
 
-#stars {
+#starsSVG {
   fill: white;
   width: 100vw;
   height: 98vh; }

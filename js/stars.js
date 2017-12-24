@@ -1,6 +1,7 @@
 (function(){
-    var twinkleBtn = $('#twinkleBtn');
-    
+
+  twinkleBtn = $('#twinkleBtn');
+
     var star1 = $('#star1'),
       star2 = $('#star2'),
       star3 = $('#star3'),
@@ -52,7 +53,7 @@
     
       
       
-    //   var IDs = $("#stars path")         // find all paths
+    //   var IDs = $("#starsSVG path")         // find all paths
     //   .map(function() { return this.id; }) // convert to set of IDs
     
     //   var nuArr=[];
