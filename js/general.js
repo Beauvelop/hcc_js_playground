@@ -1,22 +1,40 @@
-
-
-    console.log("GENERAL JS FILE");
-var starsBtn = $('#starsBtn');
-starsBtn.on('click', function(e) {
-    console.log("BTN clicked. e.target: ", e.target);
-
-    // console.log("This: ", e.target);
-})
-    var landBtn = $('#landBtn'),
-        moonBtn = $('#moonBtn'),
-        twinkleBtn = $('#twinkleBtn');
-
-
-    // console.log("starsBtn", starsBtn)
-    // starsBtn.on('click', function() {
-    //     console.log("Console JS FILE");
-
-    //     // console.log(typeof starsSVG);
-    //     // starsSVG.hide();
-    // })
+~function() {
+    var btns = $('button');
+    var landBtn = $('#landBtn');
+    var ufoBtn = $('#ufoBtn');
+    var moonBtn = $('#moonBtn');
+    var houseBtn = $('#houseBtn');
+    var treeBtn = $('#treeBtn');
+    var starsBtn = $('#starsBtn');
     
+    starsBtn.on("click", function() {
+        console.log("You clicked this: ", this, "\n with an id of ", this.id);
+        $('#twinkleBtn').toggle('fast');
+        $('#starsSVG').toggle('slow');
+    });
+    landBtn.on("click", function() {
+        console.log("You clicked this: ", this, "\n with an id of ", this.id);
+        $('#landscape').toggle('slow');
+    });
+    ufoBtn.on("click", function() {
+        console.log("You clicked this: ", this, "\n with an id of ", this.id);
+        $('#alien').toggle('slow');
+    });
+    moonBtn.on("click", function() {
+        console.log("You clicked this: ", this, "\n with an id of ", this.id);
+        $('#moon').toggle('slow');
+    });
+    houseBtn.on("click", function() {
+        console.log("You clicked this: ", this, "\n with an id of ", this.id);
+        $('#house').toggle('slow');
+    });
+    treeBtn.on("click", function() {
+        console.log("You clicked this: ", this, "\n with an id of ", this.id);
+        $('#tree').toggle('slow');
+    });
+    
+    // btns.each().on("click",function() {
+    //         alert(this);
+    //     })
+        
+}();
