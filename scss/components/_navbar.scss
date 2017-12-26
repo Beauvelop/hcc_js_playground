@@ -1,7 +1,10 @@
-button {
-  font-family: map-get($fonts, thin);
-  background: navy;
-  color: map-get($colors, mango);
-  width: 8vw;
+nav {
+  width: 50vw;
   height: 4vh;
+  margin: 0 auto;
 }
+
+button {
+  z-index: 5;
+  margin: 0 1vw;
+ }

@@ -1,0 +1,24 @@
+#starsSVG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: white;
+  width: 100vw;
+  height: 100vh;
+  // z-index: 0;
+}
+
+#twinkleBtn {
+  width: 8vw;
+  height: 5vh;
+  background: rgba(71, 109, 116, 0.4);
+  color: wheat;
+  border: 1px solid wheat;
+  position: absolute;
+  top: 10vh;
+  left: 1vw;
+}
+
+#twinkleBtn:hover {
+  background-color: black;
+}

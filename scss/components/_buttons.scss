@@ -1,7 +1,17 @@
 button {
   font-family: map-get($fonts, thin);
+  line-height: .5vh;
   width: auto;
-  height: 5vh;
-  background: navy;
+  letter-spacing: .1em;
+  height: 1vh;
+  padding: 0 .1em;
+  background: transparent;
   color: map-get($colors, mango );
+  border: 1px solid transparent;
+  z-index: 15;
+}
+
+button:hover {
+  border-right-color:white;
+  border-left-color: white;
 }

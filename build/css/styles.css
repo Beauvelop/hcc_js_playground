@@ -3,33 +3,39 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100");
 /* general styles *******/
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  background: coral; }
 
 body {
   background-color: #010301;
   position: relative;
   font-family: "Trebuchet MS", sans-serif;
+  font-size: 25px;
   font-weight: 300;
-  background: radial-gradient(200vw at 100% 200%, #61382f 10%, black 40%); }
-
-#starsSVG {
-  fill: white;
+  height: 100vh;
   width: 100vw;
-  height: 98vh; }
+  background-image: radial-gradient(200vw at 50% 200%, #853704 0%, black 40%);
+  background-size: cover; }
 
-#landscape {
+#landSVG {
   width: 105vw;
   position: absolute;
-  bottom: -2vh; }
+  bottom: -2vh;
+  left: 0;
+  z-index: 5; }
 
-#moon {
+#moonSVG {
   position: absolute;
   right: 2vw;
   top: 2vw;
   width: 20vw;
   height: 20vh; }
 
-#tree {
+#treeSVG {
   position: absolute;
   bottom: 2vh;
   left: 12vw;
@@ -40,14 +46,14 @@ body {
 .leaves {
   fill: green; }
 
-#house {
+#houseSVG {
   position: absolute;
   bottom: 1vh;
   left: 20vw;
   width: 40vw;
   z-index: 8; }
 
-#alien {
+#ufoSVG {
   position: absolute;
   bottom: 0;
   right: 80vw;
@@ -75,37 +81,6 @@ body {
     bottom: 0;
     transform: rotate3d(1, 1, 2, 0deg); } }
 
-@keyframes myship {
-  0%, 100% {
-    right: 0;
-    bottom: -.5vh;
-    transform: rotate3d(1, 1, 2, 5deg); }
-  33% {
-    right: 20px;
-    bottom: 1vh;
-    transform: rotate3d(1, 1, 2, -5deg); }
-  66% {
-    right: 10px;
-    bottom: 1vh;
-    transform: rotate3d(1, 1, 2, 5deg); } }
-
-#twinkleBtn {
-  width: 8vw;
-  height: 5vh;
-  background: #476d74;
-  color: wheat;
-  border: 1px solid wheat;
-  position: absolute;
-  top: 10vh;
-  left: 1vw; }
-
-#twinkleBtn:hover {
-  background-color: black; }
-
-#star9 {
-  /*   fill: fuchsia; */
-  /*  animation: upDown 1s ease-in-out infinite; */ }
-
 #star1,
 #star2,
 #star3,
@@ -126,17 +101,53 @@ body {
   fill-opacity: 1;
   fill: white; }
 
-button {
-  background: navy;
-  color: #ebb861;
-  width: 8vw;
-  height: 4vh; }
+nav {
+  width: 50vw;
+  height: 4vh;
+  margin: 0 auto; }
 
 button {
+  z-index: 5;
+  margin: 0 1vw; }
+
+button {
+  line-height: .5vh;
   width: auto;
+  letter-spacing: .1em;
+  height: 1vh;
+  padding: 0 .1em;
+  background: transparent;
+  color: #ebb861;
+  border: 1px solid transparent;
+  z-index: 15; }
+
+button:hover {
+  border-right-color: white;
+  border-left-color: white; }
+
+#starsSVG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: white;
+  width: 100vw;
+  height: 100vh; }
+
+#twinkleBtn {
+  width: 8vw;
   height: 5vh;
-  background: navy;
-  color: #ebb861; }
+  background: rgba(71, 109, 116, 0.4);
+  color: wheat;
+  border: 1px solid wheat;
+  position: absolute;
+  top: 10vh;
+  left: 1vw; }
+
+#twinkleBtn:hover {
+  background-color: black; }
+
+#ufoSVG {
+  z-index: 3; }
 
 h1.title-lg {
   color: #e6d8cc !important; }

@@ -1,39 +1,45 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
+html {
+  background: coral;
+}
 body {
   background-color: #010301;
   position: relative;
   font-family: "Trebuchet MS", sans-serif;
+  font-size: 25px;
   font-weight: 300;
-  background: radial-gradient(
-      200vw at 100% 200%,
-      rgb(97, 56, 47) 10%,
+  height: 100vh;
+  width: 100vw;
+  background-image:
+    radial-gradient(
+      200vw at 50% 200%,
+      rgb(133, 55, 4) 0%,
       black 40%
     );
+  background-size: cover;
 }
 
-#starsSVG {
-  fill: white;
-  width: 100vw;
-  height: 98vh;
-}
 
-#landscape {
+#landSVG {
   width: 105vw;
   position: absolute;
   bottom: -2vh;
+  left: 0;
+  z-index: 5;
   
 }
-#moon {
+#moonSVG {
   position: absolute;
   right: 2vw;
   top: 2vw;
   width: 20vw;
   height: 20vh;
 }
-#tree {
+#treeSVG {
   position: absolute;
   bottom: 2vh;
   left: 12vw;
@@ -45,7 +51,7 @@ body {
   fill: green;
 }
 
-#house {
+#houseSVG {
   position: absolute;
   bottom: 1vh;
   left: 20vw;
@@ -53,8 +59,9 @@ body {
   z-index: 8;
 }
 
-#alien {
+#ufoSVG {
   position: absolute;
+  // border: 1px solid white;
   bottom: 0;
   right: 80vw;
   height: 20vh;
@@ -93,43 +100,10 @@ body {
 
   }
 }
-@keyframes myship{
-    0%, 100% {
-      right: 0;
-      bottom: -.5vh;
-      transform: rotate3d(1, 1, 2, 5deg);
-    } 
-    33% {
-      right: 20px;
-      bottom: 1vh;
-      transform: rotate3d(1, 1, 2, -5deg);
-    } 
-    66% {
-      right: 10px;
-      bottom: 1vh;
-      transform: rotate3d(1, 1, 2, 5deg);
-    } 
-}
 
-#twinkleBtn {
-  width: 8vw;
-  height: 5vh;
-  background: rgb(71, 109, 116);
-  color: wheat;
-  border: 1px solid wheat;
-  position: absolute;
-  top: 10vh;
-  left: 1vw;
-}
 
-#twinkleBtn:hover {
-  background-color: black;
-}
 
-#star9 {
-/*   fill: fuchsia; */
-/*  animation: upDown 1s ease-in-out infinite; */
-}
+
 #star1,
 #star2,
 #star3,
